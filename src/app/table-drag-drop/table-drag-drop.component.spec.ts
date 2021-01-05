@@ -1,4 +1,4 @@
-import { async, ComponentFixture, TestBed } from '@angular/core/testing';
+import { ComponentFixture, TestBed, waitForAsync } from '@angular/core/testing';
 
 import { TableDragDropComponent } from './table-drag-drop.component';
 
@@ -6,7 +6,7 @@ describe('TableDragDropComponent', () => {
   let component: TableDragDropComponent;
   let fixture: ComponentFixture<TableDragDropComponent>;
 
-  beforeEach(async(() => {
+  beforeEach(waitForAsync(() => {
     TestBed.configureTestingModule({
       declarations: [ TableDragDropComponent ]
     })
