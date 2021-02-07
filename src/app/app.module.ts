@@ -1,30 +1,43 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+
+
 import { FormsModule } from '@angular/forms';
-import { AutofocusModule } from 'angular-autofocus-fix';
-import { BrowserAnimationsModule } from '@angular/platform-browser/animations'
+
+import { MatInputModule } from '@angular/material/input';
+import { MatCardModule } from '@angular/material/card';
+import { MatTabsModule } from '@angular/material/tabs';
+import { MatFormFieldModule } from '@angular/material/form-field';
+import { MatButtonModule } from '@angular/material/button';
+import { MatCheckboxModule } from '@angular/material/checkbox';
+import { MatIconModule } from '@angular/material/icon';
+
+import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { TodoList } from './Todo-List-App/containers/TodoList/Todo-list.component';
-import { TodoService } from './Todo-List-App/services/todo.service';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { RegisterUserComponent } from './register-user/register-user.component';
 import { HttpClientModule } from '@angular/common/http';
-import { TodoEmptyComponent } from './Todo-List-App/components/todo-empty/todo-empty.component';
-//import { AppRoutingModule } from './app-routing.module';
+import { RegisterUserService } from './register-user.service';
 
 @NgModule({
   declarations: [
     AppComponent,
-    TodoList,
-    TodoEmptyComponent
+    RegisterUserComponent
   ],
   imports: [
     BrowserModule,
-    FormsModule,
-    AutofocusModule,
     BrowserAnimationsModule,
+    FormsModule,
+    MatInputModule,
+    MatCardModule,
+    MatTabsModule,
+    MatFormFieldModule,
+    MatButtonModule,
+    MatCheckboxModule,
+    MatIconModule,
     HttpClientModule
-    //AppRoutingModule
   ],
-  providers: [TodoService],
+  providers: [RegisterUserService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
